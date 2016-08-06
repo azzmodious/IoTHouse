@@ -1,0 +1,33 @@
+{
+  "name": "iothouse",
+  "version": "1.0.0",
+  "description": "This is the code for running IoT devices in my house",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azzmodious/IoTHouse.git"
+  },
+  "keywords": [
+    "IoT",
+    "Losant",
+    "Predix",
+    "Angular"
+  ],
+  "author": "Quentin Maxwell Randolph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azzmodious/IoTHouse/issues"
+  },
+  "homepage": "https://github.com/azzmodious/IoTHouse#readme",
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "jasmine-node": "^1.14.5",
+    "request": "^2.74.0"
+  }
+}

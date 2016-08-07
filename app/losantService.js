@@ -25,7 +25,7 @@ device.on("connect", function(){
                         var msg = {temp: 100};
                         getSensorData("sense-hat.py", function(data){
                             console.info("sending temp data:"+JSON.stringify(msg));
-                            device.sendState(msg,  function(d){console.info(d);});    
+                            device.sendState(data,  function(d){console.info(d);});    
                         });
                         
                 },1000);

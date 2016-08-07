@@ -10,4 +10,4 @@ humidity = sense.get_humidity()
 pressure = sense.get_pressure()
 
 data = {'temp': temp, 'ftemp': ftemp, 'pressure': pressure, 'humidity':humidity}
-print json.dump(data)
+print json.dumps(data)

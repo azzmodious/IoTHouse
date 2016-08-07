@@ -1,5 +1,6 @@
 from sense_hat import SenseHat
 import socket
+import json
 
 hostname = socket.gethostname()
 sense = SenseHat()

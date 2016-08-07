@@ -1,5 +1,5 @@
 var Device = require('losant-mqtt').Device;
-
+var getSensorData = require("../app/sensor").getSensorData;
 // Construct a device instance.
 var device = new Device({
   id: '579d587b6befde0100524824',
@@ -23,8 +23,11 @@ device.on("connect", function(){
                 });
                 setInterval(function(){
                         var msg = {temp: 100};
-                        console.info("sending temp data:"+JSON.stringify(msg));
-                        device.sendState(msg,  function(d){console.info(d);});
+                        getSensorData("sense-hat.py", function(data){
+                            console.info("sending temp data:"+JSON.stringify(msg));
+                            device.sendState(msg,  function(d){console.info(d);});    
+                        });
+                        
                 },1000);
         }
 
